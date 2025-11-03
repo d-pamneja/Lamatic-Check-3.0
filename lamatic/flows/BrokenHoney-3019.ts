@@ -3,16 +3,16 @@ const flowConfig = {
   "name": "AI Assistant Chatbot Template",
   "nodes": [
     {
-      "id": "sticky-note-609",
+      "id": "sticky-gm21yx26f",
       "data": {
         "modes": {},
-        "width": 644,
-        "height": 235,
+        "width": 646,
+        "height": 296,
         "nodeId": "stickyNoteNode",
         "values": {
-          "id": "sticky-note-609",
-          "text": "# **⚡️ Flow Trigger**\n\n---\n\n_A trigger initiates the flow. It can be a built-in tool or an integration with an external application._\n\nTrigger Types:\n\n1. **📱App** \\- Initiate flow from an external application integration\n2. **🔌 Interface** \\- API / Webhook\n3. **💬 Widget** \\- Prebuilt UI component ( Chat, Search )\n\n---\n\n📖 Read Docs - [Flows](https://lamatic.ai/docs/flows)",
-          "color": "purple",
+          "id": "sticky-gm21yx26f",
+          "text": "# **➕ Nodes**\n\n---\n\n_Nodes are the fundamental building blocks of a flow. Each node serves a specific purpose, acting as a self-contained unit that processes input and produces output. This modular approach allows users to create complex flows by interconnecting various nodes._\n\nNode Types :\n\n1. **📱 Apps** \\- Integrate third-party applications into your flow.\n2. **🤖 AI** \\- Perform AI operations within your flow.\n3. **🛢️ Data** \\- Manipulate and transform data within your flow.\n4. **♾️ Logic** \\- Control the flow of execution in your flow.",
+          "color": "blue",
           "nodeId": "stickyNoteNode",
           "nodeName": "Sticky Note",
           "nodeType": "stickyNoteNode"
@@ -22,42 +22,12 @@ const flowConfig = {
       "zIndex": -10,
       "dragging": false,
       "measured": {
-        "width": 644,
-        "height": 235
+        "width": 646,
+        "height": 296
       },
       "position": {
-        "x": -711.2333044557109,
-        "y": -174.3119227329574
-      },
-      "selected": false,
-      "draggable": true
-    },
-    {
-      "id": "sticky-qnyx8cr1s",
-      "data": {
-        "modes": {},
-        "width": 517,
-        "height": 458,
-        "nodeId": "stickyNoteNode",
-        "values": {
-          "id": "sticky-qnyx8cr1s",
-          "text": "# **▶️ Try it out**\n\n---\n\n1. Chat Widget trigger allows you to run a flow whenever a users sends a message.  \n**🎨Customize Chat Widget appearance and behaviour inside the chat widget node**\n2. 🛠️ Configure AI Node for text Generation  \n_AI Nodes allows you to generate content and reasoning with LLMs_  \n   1. **⚙️Setup Model**  \n   2. **✍🏻Configure Prompt**  \n   3. ▶️**Test AI Node**\n3. ➕ Map the output to the chat response\n4. Run flow by clicking\n\n# ▶️ **Test 👇🏻**\n\n1. Find Setup instructions to embed this widget on your website",
-          "color": "yellow",
-          "nodeId": "stickyNoteNode",
-          "nodeName": "Sticky Note",
-          "nodeType": "stickyNoteNode"
-        }
-      },
-      "type": "stickyNoteNode",
-      "zIndex": -10,
-      "dragging": false,
-      "measured": {
-        "width": 517,
-        "height": 458
-      },
-      "position": {
-        "x": -1259.4868867034786,
-        "y": -55.66438012601236
+        "x": -711.153989769601,
+        "y": 64.44929392988769
       },
       "selected": false,
       "draggable": true
@@ -93,16 +63,16 @@ const flowConfig = {
       "draggable": true
     },
     {
-      "id": "sticky-gm21yx26f",
+      "id": "sticky-qnyx8cr1s",
       "data": {
         "modes": {},
-        "width": 646,
-        "height": 296,
+        "width": 517,
+        "height": 458,
         "nodeId": "stickyNoteNode",
         "values": {
-          "id": "sticky-gm21yx26f",
-          "text": "# **➕ Nodes**\n\n---\n\n_Nodes are the fundamental building blocks of a flow. Each node serves a specific purpose, acting as a self-contained unit that processes input and produces output. This modular approach allows users to create complex flows by interconnecting various nodes._\n\nNode Types :\n\n1. **📱 Apps** \\- Integrate third-party applications into your flow.\n2. **🤖 AI** \\- Perform AI operations within your flow.\n3. **🛢️ Data** \\- Manipulate and transform data within your flow.\n4. **♾️ Logic** \\- Control the flow of execution in your flow.",
-          "color": "blue",
+          "id": "sticky-qnyx8cr1s",
+          "text": "# **▶️ Try it out**\n\n---\n\n1. Chat Widget trigger allows you to run a flow whenever a users sends a message.  \n**🎨Customize Chat Widget appearance and behaviour inside the chat widget node**\n2. 🛠️ Configure AI Node for text Generation  \n_AI Nodes allows you to generate content and reasoning with LLMs_  \n   1. **⚙️Setup Model**  \n   2. **✍🏻Configure Prompt**  \n   3. ▶️**Test AI Node**\n3. ➕ Map the output to the chat response\n4. Run flow by clicking\n\n# ▶️ **Test 👇🏻**\n\n1. Find Setup instructions to embed this widget on your website",
+          "color": "yellow",
           "nodeId": "stickyNoteNode",
           "nodeName": "Sticky Note",
           "nodeType": "stickyNoteNode"
@@ -112,12 +82,42 @@ const flowConfig = {
       "zIndex": -10,
       "dragging": false,
       "measured": {
-        "width": 646,
-        "height": 296
+        "width": 517,
+        "height": 458
       },
       "position": {
-        "x": -711.153989769601,
-        "y": 64.44929392988769
+        "x": -1259.4868867034786,
+        "y": -55.66438012601236
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
+      "id": "sticky-note-609",
+      "data": {
+        "modes": {},
+        "width": 644,
+        "height": 235,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-note-609",
+          "text": "# **⚡️ Flow Trigger**\n\n---\n\n_A trigger initiates the flow. It can be a built-in tool or an integration with an external application._\n\nTrigger Types:\n\n1. **📱App** \\- Initiate flow from an external application integration\n2. **🔌 Interface** \\- API / Webhook\n3. **💬 Widget** \\- Prebuilt UI component ( Chat, Search )\n\n---\n\n📖 Read Docs - [Flows](https://lamatic.ai/docs/flows)",
+          "color": "purple",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "zIndex": -10,
+      "dragging": false,
+      "measured": {
+        "width": 644,
+        "height": 235
+      },
+      "position": {
+        "x": -711.2333044557109,
+        "y": -174.3119227329574
       },
       "selected": false,
       "draggable": true
@@ -190,24 +190,20 @@ const flowConfig = {
         },
         "values": {
           "id": "LLMNode_567",
-          "tools": [],
           "prompts": [
             {
-              "id": "187c2f4b-c23d-4545-abef-73dc897d6b7b",
+              "id": "47bb5d91-45f3-4351-8aa6-91b9b71ed379",
               "role": "system",
-              "content": "You are an AI Assistant"
+              "content": "You are an AI Assistant, answer user queries to the best of your abilities in a professional tone"
             },
             {
-              "id": "187c2f4b-c23d-4545-abef-73dc897d6b7d",
+              "id": "5614cbce-c8eb-4f35-a7b8-9d96e84f9f47",
               "role": "user",
-              "content": "You are William Shakespeare reborn — a master of iambic rhythm, rich metaphors, and eloquent verse.  \nWhen asked something , answer as a poem in the **style of Shakespeare**.\n\ninput:\n\n{{triggerNode_1.output.chatMessage}}"
+              "content": "USER QUERY : {{triggerNode_1.output.chatMessage}}"
             }
           ],
-          "memories": "[]",
           "messages": "{{triggerNode_1.output.chatHistory}}",
           "nodeName": "Generate Text",
-          "attachments": "",
-          "credentials": "",
           "generativeModelName": [
             {
               "type": "generator/text",
@@ -230,7 +226,7 @@ const flowConfig = {
         "x": 0,
         "y": 130
       },
-      "selected": false
+      "selected": true
     },
     {
       "id": "responseNode_triggerNode_1",
@@ -258,7 +254,7 @@ const flowConfig = {
         "x": 0,
         "y": 260
       },
-      "selected": true
+      "selected": false
     }
   ],
   "edges": [
