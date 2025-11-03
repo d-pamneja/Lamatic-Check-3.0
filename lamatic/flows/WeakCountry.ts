@@ -1,6 +1,6 @@
 const flowConfig = {
   "id": "434ea47a-eee9-4386-a1fa-e155e69af9a5",
-  "name": "finKesari Chat Trial",
+  "name": "finKesari Chat Trial Test",
   "edges": [
     {
       "id": "triggerNode_1-LLMNode_706",
