@@ -1,6 +1,6 @@
 const flowConfig = {
   "id": "f5dfbdf8-0e08-40f9-9ff2-1091399afc51",
-  "name": "Crooked Zoo",
+  "name": "Scrapping Websites Indexation",
   "nodes": [
     {
       "id": "triggerNode_1",
