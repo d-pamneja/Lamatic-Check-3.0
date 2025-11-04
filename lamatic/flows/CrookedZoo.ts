@@ -110,26 +110,6 @@ const flowConfig = {
       }
     },
     {
-      "id": "forLoopEndNode_301",
-      "data": {
-        "modes": {},
-        "nodeId": "forLoopEndNode",
-        "values": {
-          "nodeName": "Loop End",
-          "connectedTo": "forLoopNode_370"
-        }
-      },
-      "type": "forLoopEndNode",
-      "measured": {
-        "width": 216,
-        "height": 93
-      },
-      "position": {
-        "x": 0,
-        "y": 1170
-      }
-    },
-    {
       "id": "variablesNode_658",
       "data": {
         "modes": {},
@@ -281,6 +261,26 @@ const flowConfig = {
       "selected": false
     },
     {
+      "id": "forLoopEndNode_301",
+      "data": {
+        "modes": {},
+        "nodeId": "forLoopEndNode",
+        "values": {
+          "nodeName": "Loop End",
+          "connectedTo": "forLoopNode_370"
+        }
+      },
+      "type": "forLoopEndNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
+        "y": 1170
+      }
+    },
+    {
       "id": "graphqlResponseNode_532",
       "data": {
         "logic": [],
@@ -290,7 +290,7 @@ const flowConfig = {
           "outputMapping": "{\n  \"output\": \"Records indexed successfully\"\n}"
         }
       },
-      "type": "dynamicNode",
+      "type": "responseNode",
       "measured": {
         "width": 216,
         "height": 93
