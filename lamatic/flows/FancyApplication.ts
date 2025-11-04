@@ -3,6 +3,29 @@ const flowConfig = {
   "name": "Fancy Application",
   "nodes": [
     {
+      "id": "triggerNode_1",
+      "data": {
+        "modes": {},
+        "nodeId": "graphqlNode",
+        "values": {
+          "id": "triggerNode_1",
+          "nodeName": "API Request",
+          "responeType": "realtime",
+          "advance_schema": "{\n  \"steps\": \"string\"\n}"
+        },
+        "trigger": true
+      },
+      "type": "triggerNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
       "id": "InstructorLLMNode_445",
       "data": {
         "modes": {},
@@ -92,7 +115,7 @@ const flowConfig = {
           "location": "",
           "nodeName": "Web Search",
           "dateRange": "",
-          "credentials": "DP Serper Basic Auth"
+          "credentials": "Serper Basic Auth"
         }
       },
       "type": "dynamicNode",
@@ -149,29 +172,6 @@ const flowConfig = {
         "y": 650
       },
       "draggable": false
-    },
-    {
-      "id": "triggerNode_1",
-      "data": {
-        "modes": {},
-        "nodeId": "graphqlNode",
-        "values": {
-          "id": "triggerNode_1",
-          "nodeName": "API Request",
-          "responeType": "realtime",
-          "advance_schema": "{\n  \"steps\": \"string\"\n}"
-        },
-        "trigger": true
-      },
-      "type": "triggerNode",
-      "measured": {
-        "width": 216,
-        "height": 93
-      },
-      "position": {
-        "x": 0,
-        "y": 0
-      }
     },
     {
       "id": "responseNode_triggerNode_1",
