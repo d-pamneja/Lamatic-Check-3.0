@@ -3,10 +3,129 @@ const flowConfig = {
   "name": "Fancy Application",
   "nodes": [
     {
+      "id": "sticky-gm21yx26f",
+      "data": {
+        "modes": {},
+        "width": 454,
+        "height": 528,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-gm21yx26f",
+          "text": "### **➕ Nodes**\n\n---\n\n### _Nodes are the fundamental building blocks of a flow. Each node serves a specific purpose, acting as a self-contained unit that processes input and produces output. This modular approach allows users to create complex flows by interconnecting various nodes._\n\n### Node Types :\n\n### **📱 Apps** \\- Integrate third-party applications into your flow.\n\n### **🤖 AI** \\- Perform AI operations within your flow.\n\n### **🛢️ Data** \\- Manipulate and transform data within your flow.\n\n### **♾️ Logic** \\- Control the flow of execution in your flow.",
+          "color": "blue",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "dragging": false,
+      "measured": {
+        "width": 454,
+        "height": 528
+      },
+      "position": {
+        "x": -550.5597417245873,
+        "y": 197.44255403182262
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
+      "id": "sticky-kzv63mb30",
+      "data": {
+        "modes": {},
+        "width": 462,
+        "height": 145,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-kzv63mb30",
+          "text": "### **💬 Flow response**\n\n---\n\n### _The final step of your flow can send output to an external system, which is particularly useful for flows initiated by triggers like Chat or GraphQL API integrations._",
+          "color": "green",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "dragging": false,
+      "measured": {
+        "width": 462,
+        "height": 145
+      },
+      "position": {
+        "x": -554.3936656690696,
+        "y": 737.0658295318717
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
+      "id": "sticky-qnyx8cr1s",
+      "data": {
+        "modes": {},
+        "width": 322,
+        "height": 893,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-qnyx8cr1s",
+          "text": "### **▶️ Try it out**\n\n---\n\n1. **🔌 Trigger via GraphQL API**  \n### _This flow is initiated when an external app or service sends a POST request to the GraphQL endpoint._  \n### Example payload:  \n### {  \n \"query\": \"How should I organize a research workflow?\",  \n \"history\": \\[  \n {  \n \"role\": \"assistant\",  \n \"message\": \"We previously discussed how to prioritize daily tasks.\"  \n }  \n \\]  \n}\n2. **🧠 LLM Node — “Generate Text”**  \n   * Uses `gpt-4o-mini` to simulate a “Supervisor Agent” step.  \n   * Reads both the new `query` and conversation `history`.  \n   * Responds **in first person**, describing what it will do next to solve the user’s request — not the final answer itself.\n3. **💬 API Response Node**  \n   * The output is returned as JSON:  \n   ### {  \n   \"steps\": \"<model’s process-thinking paragraph>\"  \n   }  \n   * This makes it easy to embed into your frontend or workflow builder.\n\n---\n\n### **▶️ Test it 👇🏻**\n\n### **Option A:** Use the in-app **“Run Flow”** button and provide a sample `query` \\+ `history`.\n\n### **Option B:** Trigger externally via Lamatic’s **GraphQL API endpoint** using `curl` or Postman.\n\n---\n\n### 🧭 _Once executed, inspect the response field_ `LLMNode_680.output.generatedResponse` _or view the formatted JSON returned by the GraphQL API._",
+          "color": "yellow",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "dragging": false,
+      "measured": {
+        "width": 322,
+        "height": 893
+      },
+      "position": {
+        "x": -893.0343540441895,
+        "y": -10.765616614072655
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
+      "id": "sticky-note-609",
+      "data": {
+        "modes": {},
+        "width": 453,
+        "height": 197,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-note-609",
+          "text": "### **⚡️ Flow Trigger**\n\n---\n\n### _A trigger initiates the flow. It can be a built-in tool or an integration with an external application._\n\n### Trigger Types:\n\n### **📱App** \\- Initiate flow from an external application integration\n\n### **🔌 Interface** \\- API / Webhook\n\n### **💬 Widget** \\- Prebuilt UI component ( Chat, Search )\n\n---\n\n📖 Read Docs - [Flows](https://lamatic.ai/docs/flows)",
+          "color": "purple",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "dragging": false,
+      "measured": {
+        "width": 453,
+        "height": 197
+      },
+      "position": {
+        "x": -552.9859671753022,
+        "y": -11.90733425595539
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
       "id": "triggerNode_1",
       "data": {
         "modes": {},
         "nodeId": "graphqlNode",
+        "schema": {
+          "sampleOutput": "string"
+        },
         "values": {
           "id": "triggerNode_1",
           "nodeName": "API Request",
@@ -30,6 +149,7 @@ const flowConfig = {
       "data": {
         "modes": {},
         "nodeId": "InstructorLLMNode",
+        "schema": {},
         "values": {
           "id": "InstructorLLMNode_445",
           "tools": [],
@@ -76,6 +196,9 @@ const flowConfig = {
       "data": {
         "modes": {},
         "nodeId": "forLoopNode",
+        "schema": {
+          "currentValue": "object"
+        },
         "values": {
           "id": "forLoopNode_626",
           "wait": 0,
@@ -104,6 +227,9 @@ const flowConfig = {
       "data": {
         "modes": {},
         "nodeId": "webSearchNode",
+        "schema": {
+          "output": "object"
+        },
         "values": {
           "id": "webSearchNode_441",
           "page": 1,
@@ -134,6 +260,9 @@ const flowConfig = {
       "data": {
         "modes": {},
         "nodeId": "forLoopEndNode",
+        "schema": {
+          "loopOutput": "object"
+        },
         "values": {
           "id": "forLoopEndNode_366",
           "nodeName": "Loop End",
@@ -156,6 +285,7 @@ const flowConfig = {
       "data": {
         "modes": {},
         "nodeId": "codeNode",
+        "schema": {},
         "values": {
           "id": "codeNode_201",
           "code": "const researchArray = {{forLoopEndNode_366.output.loopOutput}};\n\nconst research = researchArray.flatMap((searchEntry) => {\n  return searchEntry.webSearchNode_441.output.output.organic;\n});\n\nconst links = research.map((item) => item.link);\n\noutput = {\n  research: research,\n  links: links\n};",
@@ -178,6 +308,7 @@ const flowConfig = {
       "data": {
         "modes": {},
         "nodeId": "graphqlResponseNode",
+        "schema": {},
         "values": {
           "id": "responseNode_triggerNode_1",
           "headers": "{\"content-type\":\"application/json\"}",
