@@ -3,16 +3,16 @@ const flowConfig = {
   "name": "Scrapping Websites Indexation",
   "nodes": [
     {
-      "id": "sticky-note-609",
+      "id": "sticky-gm21yx26f",
       "data": {
         "modes": {},
-        "width": 691,
-        "height": 250,
+        "width": 683,
+        "height": 889,
         "nodeId": "stickyNoteNode",
         "values": {
-          "id": "sticky-note-609",
-          "text": "# **⚡️ Flow Trigger**\n\n---\n\n_A trigger initiates the flow. It can be a built-in tool or an integration with an external application._\n\nTrigger Types:\n\n1. **📱App** \\- Initiate flow from an external application integration\n2. **🔌 Interface** \\- API / Webhook\n3. **💬 Widget** \\- Prebuilt UI component ( Chat, Search )\n\n---\n\n📖 Read Docs - [Flows](https://lamatic.ai/docs/flows)",
-          "color": "purple",
+          "id": "sticky-gm21yx26f",
+          "text": "# **➕ Nodes**\n\n---\n\n_Nodes are the fundamental building blocks of a flow. Each node serves a specific purpose, acting as a self-contained unit that processes input and produces output. This modular approach allows users to create complex flows by interconnecting various nodes._\n\nNode Types :\n\n1. **📱 Apps** \\- Integrate third-party applications into your flow.\n2. **🤖 AI** \\- Perform AI operations within your flow.\n3. **🛢️ Data** \\- Manipulate and transform data within your flow.\n4. **♾️ Logic** \\- Control the flow of execution in your flow.",
+          "color": "blue",
           "nodeId": "stickyNoteNode",
           "nodeName": "Sticky Note",
           "nodeType": "stickyNoteNode"
@@ -21,41 +21,12 @@ const flowConfig = {
       "type": "stickyNoteNode",
       "dragging": false,
       "measured": {
-        "width": 691,
-        "height": 250
+        "width": 683,
+        "height": 889
       },
       "position": {
-        "x": -846.0854460055239,
-        "y": -9.156120915628719
-      },
-      "selected": false,
-      "draggable": true
-    },
-    {
-      "id": "sticky-qnyx8cr1s",
-      "data": {
-        "modes": {},
-        "width": 610,
-        "height": 878,
-        "nodeId": "stickyNoteNode",
-        "values": {
-          "id": "sticky-qnyx8cr1s",
-          "text": "# **▶️ Try it out**\n\n---\n\n1. Chat Widget trigger allows you to run a flow whenever a users sends a message.  \n**🎨Customize Chat Widget appearance and behaviour inside the chat widget node**\n2. 🛠️ Configure AI Node for text Generation  \n_AI Nodes allows you to generate content and reasoning with LLMs_  \n   1. **⚙️Setup Model**  \n   2. **✍🏻Configure Prompt**  \n   3. ▶️**Test AI Node**\n3. ➕ Map the output to the chat response\n4. Run flow by clicking\n\n# ▶️ **Test 👇🏻**\n\n1. Find Setup instructions to embed this widget on your website",
-          "color": "yellow",
-          "nodeId": "stickyNoteNode",
-          "nodeName": "Sticky Note",
-          "nodeType": "stickyNoteNode"
-        }
-      },
-      "type": "stickyNoteNode",
-      "dragging": false,
-      "measured": {
-        "width": 610,
-        "height": 878
-      },
-      "position": {
-        "x": -1466.406867821386,
-        "y": 284.2903797711152
+        "x": -847.0386648188429,
+        "y": 280.92513207360435
       },
       "selected": false,
       "draggable": true
@@ -90,16 +61,16 @@ const flowConfig = {
       "draggable": true
     },
     {
-      "id": "sticky-gm21yx26f",
+      "id": "sticky-qnyx8cr1s",
       "data": {
         "modes": {},
-        "width": 683,
-        "height": 889,
+        "width": 610,
+        "height": 878,
         "nodeId": "stickyNoteNode",
         "values": {
-          "id": "sticky-gm21yx26f",
-          "text": "# **➕ Nodes**\n\n---\n\n_Nodes are the fundamental building blocks of a flow. Each node serves a specific purpose, acting as a self-contained unit that processes input and produces output. This modular approach allows users to create complex flows by interconnecting various nodes._\n\nNode Types :\n\n1. **📱 Apps** \\- Integrate third-party applications into your flow.\n2. **🤖 AI** \\- Perform AI operations within your flow.\n3. **🛢️ Data** \\- Manipulate and transform data within your flow.\n4. **♾️ Logic** \\- Control the flow of execution in your flow.",
-          "color": "blue",
+          "id": "sticky-qnyx8cr1s",
+          "text": "# **▶️ Try it out**\n\n1. **Trigger via GraphQL / API**  \n\\_This flow is initiated using an API request. Pass an array of URLs to begin processing:  \n```json  \n{  \n\"urls\": [\"https://example.com/page1\", \"https://example.com/page2\"]  \n}  \n```\n2. **🔍 Firecrawl Node**  \n_Scrapes and extracts main content from all provided URLs._  \nYou can control crawling depth, timeouts, and exclusion filters.\n3. **🔁 Loop + Chunking**  \n_Each page’s content is chunked into smaller sections for better embedding._  \nChunks are extracted and processed sequentially in a loop.\n4. **🧠 Vectorization**  \n_Each chunk is converted into a vector using your configured embedding model._\n5. **🗂️ Index to Vector DB**  \n_Vectors and their metadata (title, description, source) are stored in your selected database._\n\n# **▶️ Test it 👇🏻**\n\n**Option A:** Run directly using the GraphQL API trigger  \n**Option B:** Test via the in-app “Run Flow” button\n\n_Once done, check your Vector DB to confirm that all records were indexed successfully!_",
+          "color": "yellow",
           "nodeId": "stickyNoteNode",
           "nodeName": "Sticky Note",
           "nodeType": "stickyNoteNode"
@@ -108,12 +79,41 @@ const flowConfig = {
       "type": "stickyNoteNode",
       "dragging": false,
       "measured": {
-        "width": 683,
-        "height": 889
+        "width": 610,
+        "height": 878
       },
       "position": {
-        "x": -847.0386648188429,
-        "y": 280.92513207360435
+        "x": -1466.406867821386,
+        "y": 284.2903797711152
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
+      "id": "sticky-note-609",
+      "data": {
+        "modes": {},
+        "width": 691,
+        "height": 250,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-note-609",
+          "text": "# **⚡️ Flow Trigger**\n\n---\n\n_A trigger initiates the flow. It can be a built-in tool or an integration with an external application._\n\nTrigger Types:\n\n1. **📱App** \\- Initiate flow from an external application integration\n2. **🔌 Interface** \\- API / Webhook\n3. **💬 Widget** \\- Prebuilt UI component ( Chat, Search )\n\n---\n\n📖 Read Docs - [Flows](https://lamatic.ai/docs/flows)",
+          "color": "purple",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "dragging": false,
+      "measured": {
+        "width": 691,
+        "height": 250
+      },
+      "position": {
+        "x": -846.0854460055239,
+        "y": -9.156120915628719
       },
       "selected": false,
       "draggable": true
