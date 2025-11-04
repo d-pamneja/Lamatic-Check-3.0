@@ -3,9 +3,129 @@ const flowConfig = {
   "name": "Scrapping Websites Indexation",
   "nodes": [
     {
+      "id": "sticky-note-609",
+      "data": {
+        "modes": {},
+        "width": 691,
+        "height": 250,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-note-609",
+          "text": "# **⚡️ Flow Trigger**\n\n---\n\n_A trigger initiates the flow. It can be a built-in tool or an integration with an external application._\n\nTrigger Types:\n\n1. **📱App** \\- Initiate flow from an external application integration\n2. **🔌 Interface** \\- API / Webhook\n3. **💬 Widget** \\- Prebuilt UI component ( Chat, Search )\n\n---\n\n📖 Read Docs - [Flows](https://lamatic.ai/docs/flows)",
+          "color": "purple",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "dragging": false,
+      "measured": {
+        "width": 691,
+        "height": 250
+      },
+      "position": {
+        "x": -724.076935782567,
+        "y": -9.156120915628719
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
+      "id": "sticky-qnyx8cr1s",
+      "data": {
+        "modes": {},
+        "width": 558,
+        "height": 554,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-qnyx8cr1s",
+          "text": "# **▶️ Try it out**\n\n---\n\n1. Chat Widget trigger allows you to run a flow whenever a users sends a message.  \n**🎨Customize Chat Widget appearance and behaviour inside the chat widget node**\n2. 🛠️ Configure AI Node for text Generation  \n_AI Nodes allows you to generate content and reasoning with LLMs_  \n   1. **⚙️Setup Model**  \n   2. **✍🏻Configure Prompt**  \n   3. ▶️**Test AI Node**\n3. ➕ Map the output to the chat response\n4. Run flow by clicking\n\n# ▶️ **Test 👇🏻**\n\n1. Find Setup instructions to embed this widget on your website",
+          "color": "yellow",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "dragging": false,
+      "measured": {
+        "width": 558,
+        "height": 554
+      },
+      "position": {
+        "x": -1314.1652968190087,
+        "y": 366.3863092328007
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
+      "id": "sticky-kzv63mb30",
+      "data": {
+        "modes": {},
+        "width": 689,
+        "height": 185,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-kzv63mb30",
+          "text": "# **💬 Flow response**\n\n---\n\n## _The final step of your flow can send output to an external system, which is particularly useful for flows initiated by triggers like Chat or GraphQL API integrations._",
+          "color": "green",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "dragging": false,
+      "measured": {
+        "width": 689,
+        "height": 185
+      },
+      "position": {
+        "x": -718.9576644439246,
+        "y": 1202.552969547094
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
+      "id": "sticky-gm21yx26f",
+      "data": {
+        "modes": {},
+        "width": 683,
+        "height": 897,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-gm21yx26f",
+          "text": "# **➕ Nodes**\n\n---\n\n_Nodes are the fundamental building blocks of a flow. Each node serves a specific purpose, acting as a self-contained unit that processes input and produces output. This modular approach allows users to create complex flows by interconnecting various nodes._\n\nNode Types :\n\n1. **📱 Apps** \\- Integrate third-party applications into your flow.\n2. **🤖 AI** \\- Perform AI operations within your flow.\n3. **🛢️ Data** \\- Manipulate and transform data within your flow.\n4. **♾️ Logic** \\- Control the flow of execution in your flow.",
+          "color": "blue",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "dragging": false,
+      "measured": {
+        "width": 683,
+        "height": 897
+      },
+      "position": {
+        "x": -718.1240125077941,
+        "y": 280.92513207360435
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
       "id": "triggerNode_1",
       "data": {
+        "modes": {},
         "nodeId": "graphqlNode",
+        "schema": {
+          "sampleOutput": "string"
+        },
         "values": {
           "nodeName": "API Request",
           "responeType": "realtime",
@@ -32,6 +152,15 @@ const flowConfig = {
           "webhook": "list"
         },
         "nodeId": "firecrawlNode",
+        "schema": {
+          "data": "array",
+          "total": "number",
+          "status": "string",
+          "success": "boolean",
+          "completed": "string",
+          "expiresAt": "string",
+          "creditsUsed": "number"
+        },
         "values": {
           "id": "firecrawlNode_785",
           "url": "",
@@ -88,6 +217,9 @@ const flowConfig = {
       "data": {
         "modes": {},
         "nodeId": "forLoopNode",
+        "schema": {
+          "currentValue": "object"
+        },
         "values": {
           "wait": 0,
           "endValue": "10",
@@ -114,6 +246,7 @@ const flowConfig = {
       "data": {
         "modes": {},
         "nodeId": "variablesNode",
+        "schema": {},
         "values": {
           "mapping": "{\n  \"title\": {\n    \"type\": \"string\",\n    \"value\": \"{{forLoopNode_370.output.currentValue.metadata.title}}\"\n  },\n  \"description\": {\n    \"type\": \"string\",\n    \"value\": \"{{forLoopNode_370.output.currentValue.metadata.description}}\"\n  },\n  \"source\": {\n    \"type\": \"string\",\n    \"value\": \"{{forLoopNode_370.output.currentValue.metadata.url}}\"\n  }\n}",
           "nodeName": "Variables"
@@ -134,6 +267,9 @@ const flowConfig = {
       "data": {
         "modes": {},
         "nodeId": "chunkNode",
+        "schema": {
+          "chunks": "string"
+        },
         "values": {
           "nodeName": "Chunking",
           "chunkField": "{{forLoopNode_370.output.currentValue.markdown}}",
@@ -162,6 +298,7 @@ const flowConfig = {
       "data": {
         "modes": {},
         "nodeId": "codeNode",
+        "schema": {},
         "values": {
           "code": "let docs = {{ chunkNode_968.output.chunks }};\n\nlet outputDocs = docs.map((doc) => doc.pageContent)\n\nreturn outputDocs",
           "nodeName": "Extract Chunks"
@@ -183,6 +320,10 @@ const flowConfig = {
         "logic": [],
         "modes": {},
         "nodeId": "vectorizeNode",
+        "schema": {
+          "_meta": "object",
+          "vectors": "object"
+        },
         "values": {
           "id": "vectorizeNode_314",
           "nodeName": "Vectorize",
@@ -213,6 +354,7 @@ const flowConfig = {
       "data": {
         "modes": {},
         "nodeId": "codeNode",
+        "schema": {},
         "values": {
           "code": "let vectors = {{ vectorizeNode_314.output.vectors }};\nlet metadataProps = [];\nlet texts = {{codeNode_794.output}};\n\nfor (const idx in vectors) {\n  let metadata = {}\n  metadata[\"content\"] = texts[idx];\n  metadata[\"title\"] = {{variablesNode_658.output.title}};\n  metadata[\"description\"] = {{variablesNode_658.output.description}};\n  metadata[\"source\"] = {{variablesNode_658.output.source}};\n  metadataProps.push(metadata)\n};\n\noutput = { \"metadata\": metadataProps, \"vectors\": vectors }",
           "nodeName": "Transform Metadata"
@@ -234,6 +376,11 @@ const flowConfig = {
         "logic": [],
         "modes": {},
         "nodeId": "vectorNode",
+        "schema": {
+          "message": "string",
+          "recordsIndexed": "string",
+          "duplicateRecordsDeleted": "string"
+        },
         "values": {
           "id": "vectorNode_157",
           "limit": 20,
@@ -265,6 +412,9 @@ const flowConfig = {
       "data": {
         "modes": {},
         "nodeId": "forLoopEndNode",
+        "schema": {
+          "loopOutput": "object"
+        },
         "values": {
           "nodeName": "Loop End",
           "connectedTo": "forLoopNode_370"
@@ -284,7 +434,9 @@ const flowConfig = {
       "id": "graphqlResponseNode_532",
       "data": {
         "logic": [],
+        "modes": {},
         "nodeId": "graphqlResponseNode",
+        "schema": {},
         "values": {
           "nodeName": "API Response",
           "outputMapping": "{\n  \"output\": \"Records indexed successfully\"\n}"
@@ -299,7 +451,7 @@ const flowConfig = {
         "x": 0,
         "y": 1300
       },
-      "selected": true
+      "selected": false
     }
   ],
   "edges": [
