@@ -3,16 +3,288 @@ const flowConfig = {
   "name": "Fancy Application",
   "nodes": [
     {
+      "id": "InstructorLLMNode_445",
+      "data": {
+        "modes": {},
+        "nodeId": "InstructorLLMNode",
+        "values": {
+          "id": "InstructorLLMNode_445",
+          "tools": [],
+          "schema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"queries\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\",\n        \"required\": true\n      },\n      \"description\": \"This is the collection of queries based on which the research will be prepared\"\n    }\n  }\n}",
+          "prompts": [
+            {
+              "id": "187c2f4b-c23d-4545-abef-73dc897d6b7b",
+              "role": "system",
+              "content": "You are a **Search Query Generator Agent**.  \nYour task is to carefully read the reasoning steps provided (a single paragraph in first person that explains how the Supervisor Agent will approach the query). From that paragraph, you must generate exactly **3 unique, high-quality search queries** that would help gather the most relevant information.\n\n### Rules\n\n1. **Output only 3 search queries** — no more, no less.\n2. Each query should be **concise, specific, and directly tied** to the reasoning steps.\n3. The queries should cover **different aspects** of the problem, not duplicates.\n4. Phrase them as **natural web searches** that a user might type into Google or Bing.\n5. Do not repeat wording unnecessarily; prioritize variety to maximize coverage.\n6. Return them as a **JSON object** in this format:\n\n```\n{\n  \"queries\": [\n    \"string\",\n    \"string\",\n    \"string\"\n  ]\n}\n\n```\n\n### Example\n\n**Reasoning Input:**  \n\"I’ll treat this as a new query and start by searching reputable furniture guides, consumer reports, and expert reviews comparing leather and cotton sofas across durability, comfort, maintenance, stain resistance, pet/kid suitability, climate, sustainability, and cost of ownership. Then I’ll review care guides, warranty terms, and current price ranges, plus look into ethical/sustainability certifications for both materials. I’ll also check for common pitfalls (like cracking, pilling, fading, allergies) and real-world user feedback to validate trade-offs. Finally, I’ll prepare a structured side-by-side comparison with pros/cons, lifespan and maintenance expectations, and tailored recommendations based on different household needs and budgets.\"\n\n**Expected Output:**\n\n```\n{\n  \"queries\": [\n    \"leather vs cotton sofa durability comfort maintenance comparison\",\n    \"ethical sustainable upholstery certifications and eco-friendly sofa materials\",\n    \"real-world user reviews and common issues with leather and cotton sofas\"\n  ]\n}\n```"
+            },
+            {
+              "id": "187c2f4b-c23d-4545-abef-73dc897d6b7d",
+              "role": "user",
+              "content": "STEPS : {{triggerNode_1.output.steps}}"
+            }
+          ],
+          "memories": "[]",
+          "messages": "[]",
+          "nodeName": "Generate JSON",
+          "attachments": "",
+          "generativeModelName": {
+            "type": "generator/text",
+            "params": {},
+            "model_name": "gpt-4o-mini",
+            "credentialId": "6d70d145-9f23-4e29-b984-98ece28c56fd",
+            "provider_name": "openai",
+            "credential_name": "LAMATIC_OPENAI_API_KEY"
+          }
+        }
+      },
+      "type": "dynamicNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
+        "y": 130
+      },
+      "draggable": false
+    },
+    {
+      "id": "forLoopNode_626",
+      "data": {
+        "modes": {},
+        "nodeId": "forLoopNode",
+        "values": {
+          "id": "forLoopNode_626",
+          "wait": 0,
+          "endValue": "10",
+          "nodeName": "Loop",
+          "increment": "1",
+          "connectedTo": "forLoopEndNode_366",
+          "iterateOver": "list",
+          "initialValue": "0",
+          "iteratorValue": "{{InstructorLLMNode_445.output.queries}}"
+        }
+      },
+      "type": "forLoopNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
+        "y": 260
+      },
+      "draggable": false
+    },
+    {
+      "id": "webSearchNode_441",
+      "data": {
+        "modes": {},
+        "nodeId": "webSearchNode",
+        "values": {
+          "id": "webSearchNode_441",
+          "page": 1,
+          "type": "https://google.serper.dev/search",
+          "query": "{{forLoopNode_626.output.currentValue}}",
+          "country": "",
+          "results": "5",
+          "language": "",
+          "location": "",
+          "nodeName": "Web Search",
+          "dateRange": "",
+          "credentials": "DP Serper Basic Auth"
+        }
+      },
+      "type": "dynamicNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
+        "y": 390
+      },
+      "draggable": false
+    },
+    {
+      "id": "forLoopEndNode_366",
+      "data": {
+        "modes": {},
+        "nodeId": "forLoopEndNode",
+        "values": {
+          "id": "forLoopEndNode_366",
+          "nodeName": "Loop End",
+          "connectedTo": "forLoopNode_626"
+        }
+      },
+      "type": "forLoopEndNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
+        "y": 520
+      },
+      "draggable": false
+    },
+    {
+      "id": "codeNode_201",
+      "data": {
+        "modes": {},
+        "nodeId": "codeNode",
+        "values": {
+          "id": "codeNode_201",
+          "code": "const researchArray = {{forLoopEndNode_366.output.loopOutput}};\n\nconst research = researchArray.flatMap((searchEntry) => {\n  return searchEntry.webSearchNode_441.output.output.organic;\n});\n\nconst links = research.map((item) => item.link);\n\noutput = {\n  research: research,\n  links: links\n};",
+          "nodeName": "Collate Research"
+        }
+      },
+      "type": "dynamicNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
+        "y": 650
+      },
+      "draggable": false
+    },
+    {
       "id": "triggerNode_1",
-      "data": {},
+      "data": {
+        "modes": {},
+        "nodeId": "graphqlNode",
+        "values": {
+          "id": "triggerNode_1",
+          "nodeName": "API Request",
+          "responeType": "realtime",
+          "advance_schema": "{\n  \"steps\": \"string\"\n}"
+        },
+        "trigger": true
+      },
       "type": "triggerNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
       "position": {
         "x": 0,
         "y": 0
       }
+    },
+    {
+      "id": "responseNode_triggerNode_1",
+      "data": {
+        "modes": {},
+        "nodeId": "graphqlResponseNode",
+        "values": {
+          "id": "responseNode_triggerNode_1",
+          "headers": "{\"content-type\":\"application/json\"}",
+          "retries": "0",
+          "nodeName": "API Response",
+          "webhookUrl": "",
+          "retry_delay": "0",
+          "outputMapping": "{\n  \"research\": \"{{codeNode_201.output.research}}\",\n  \"links\": \"{{codeNode_201.output.links}}\"\n}"
+        }
+      },
+      "type": "responseNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
+        "y": 780
+      }
     }
   ],
-  "edges": [],
+  "edges": [
+    {
+      "id": "triggerNode_1-InstructorLLMNode_445",
+      "type": "defaultEdge",
+      "source": "triggerNode_1",
+      "target": "InstructorLLMNode_445",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "InstructorLLMNode_445-forLoopNode_626",
+      "type": "defaultEdge",
+      "source": "InstructorLLMNode_445",
+      "target": "forLoopNode_626",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "forLoopNode_626-webSearchNode_441",
+      "data": {
+        "condition": "Loop Start",
+        "invisible": true
+      },
+      "type": "conditionEdge",
+      "source": "forLoopNode_626",
+      "target": "webSearchNode_441",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "webSearchNode_441-forLoopEndNode_366",
+      "type": "defaultEdge",
+      "source": "webSearchNode_441",
+      "target": "forLoopEndNode_366",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "forLoopEndNode_366-codeNode_201",
+      "type": "defaultEdge",
+      "source": "forLoopEndNode_366",
+      "target": "codeNode_201",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "codeNode_201-responseNode_triggerNode_1",
+      "type": "defaultEdge",
+      "source": "codeNode_201",
+      "target": "responseNode_triggerNode_1",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "forLoopNode_626-forLoopEndNode_366",
+      "data": {
+        "condition": "Loop",
+        "invisible": false
+      },
+      "type": "loopEdge",
+      "source": "forLoopNode_626",
+      "target": "forLoopEndNode_366",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "forLoopEndNode_366-forLoopNode_626",
+      "data": {
+        "condition": "Loop",
+        "invisible": true
+      },
+      "type": "loopEdge",
+      "source": "forLoopEndNode_366",
+      "target": "forLoopNode_626",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "response-responseNode_triggerNode_1",
+      "type": "responseEdge",
+      "source": "triggerNode_1",
+      "target": "responseNode_triggerNode_1",
+      "sourceHandle": "to-response",
+      "targetHandle": "from-trigger"
+    }
+  ],
   "status": "active",
   "created_at": "2025-11-04T16:50:17.220015+00:00"
 };
