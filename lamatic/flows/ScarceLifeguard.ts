@@ -3,98 +3,11 @@ const flowConfig = {
   "name": "Slack RAG Bot",
   "nodes": [
     {
-      "id": "sticky-note-609",
-      "data": {
-        "modes": {},
-        "width": 539,
-        "height": 179,
-        "nodeId": "stickyNoteNode",
-        "values": {
-          "id": "sticky-note-609",
-          "text": "### **⚡️ Flow Trigger**\n\n---\n\n### _A trigger initiates the flow. It can be a built-in tool or an integration with an external application._\n\n### Trigger Types:\n\n### **📱App** \\- Initiate flow from an external application integration\n\n### **🔌 Interface** \\- API / Webhook\n\n### **💬 Widget** \\- Prebuilt UI component ( Chat, Search )\n\n---\n\n### 📖 Read Docs - [Flows](https://lamatic.ai/docs/flows)",
-          "color": "purple",
-          "nodeId": "stickyNoteNode",
-          "nodeName": "Sticky Note",
-          "nodeType": "stickyNoteNode"
-        }
-      },
-      "type": "stickyNoteNode",
-      "dragging": false,
-      "measured": {
-        "width": 539,
-        "height": 179
-      },
-      "position": {
-        "x": -625.1984516940639,
-        "y": -97.95725752075595
-      },
-      "selected": false,
-      "draggable": true
-    },
-    {
-      "id": "sticky-qnyx8cr1s",
-      "data": {
-        "modes": {},
-        "width": 381,
-        "height": 533,
-        "nodeId": "stickyNoteNode",
-        "values": {
-          "id": "sticky-qnyx8cr1s",
-          "text": "### **▶️ Try it out**\n\n1. **💬 Trigger via Slack Command**  \n### _This flow starts when a user sends a message in Slack using the defined command (e.g.,_ `/ask`_)._  \nThe trigger node captures the user's query and sends it into the flow.  \n### Example:\n\n### /ask What are the key points from our sales handbook?  \n\n1. **🧠 RAG Node**  \n### _Your query is processed through the RAG pipeline._\n\n### The text from Slack (`{{triggerNode_1.output.text}}`) becomes the **query**.\n\n### The system searches your connected **Vector DB (TestDB)** for relevant context documents.\n\n### The retrieved content is passed to the **LLM (GPT-4o-mini)** for a context-aware response.\n\n1. **💌 Slack Response Node**\n\n### _The generated answer is automatically posted back to the same Slack channel_  \n→ Using `{{RAGNode_555.output.modelResponse}}` as the message text.\n\n---\n\n### **▶️ Test it 👇🏻**\n\n### **Option A:** Type `/ask <your query>` directly in the configured Slack channel  \n**Option B:** Use the “Run Flow” button to simulate a manual trigger\n\n---\n\n### 🧭 \\_Once it runs, check the Slack channel to see the model’s response posted in real-time.",
-          "color": "yellow",
-          "nodeId": "stickyNoteNode",
-          "nodeName": "Sticky Note",
-          "nodeType": "stickyNoteNode"
-        }
-      },
-      "type": "stickyNoteNode",
-      "dragging": false,
-      "measured": {
-        "width": 381,
-        "height": 533
-      },
-      "position": {
-        "x": -1014.8422059300116,
-        "y": -96.96605785668953
-      },
-      "selected": false,
-      "draggable": true
-    },
-    {
-      "id": "sticky-kzv63mb30",
-      "data": {
-        "modes": {},
-        "width": 552,
-        "height": 111,
-        "nodeId": "stickyNoteNode",
-        "values": {
-          "id": "sticky-kzv63mb30",
-          "text": "### **💬 Flow response**\n\n---\n\n### _The final step of your flow can send output to an external system, which is particularly useful for flows initiated by triggers like Chat or GraphQL API integrations._",
-          "color": "green",
-          "nodeId": "stickyNoteNode",
-          "nodeName": "Sticky Note",
-          "nodeType": "stickyNoteNode"
-        }
-      },
-      "type": "stickyNoteNode",
-      "dragging": false,
-      "measured": {
-        "width": 552,
-        "height": 111
-      },
-      "position": {
-        "x": -626.7369160490516,
-        "y": 326.7055300017479
-      },
-      "selected": false,
-      "draggable": true
-    },
-    {
       "id": "sticky-gm21yx26f",
       "data": {
         "modes": {},
-        "width": 542,
-        "height": 211,
+        "width": 615,
+        "height": 240,
         "nodeId": "stickyNoteNode",
         "values": {
           "id": "sticky-gm21yx26f",
@@ -108,12 +21,99 @@ const flowConfig = {
       "type": "stickyNoteNode",
       "dragging": false,
       "measured": {
-        "width": 542,
-        "height": 211
+        "width": 615,
+        "height": 240
       },
       "position": {
-        "x": -624.4752297482132,
-        "y": 90.03433994003484
+        "x": -629.0793244736079,
+        "y": 94.63843466542943
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
+      "id": "sticky-kzv63mb30",
+      "data": {
+        "modes": {},
+        "width": 606,
+        "height": 201,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-kzv63mb30",
+          "text": "### **💬 Flow response**\n\n---\n\n### _The final step of your flow can send output to an external system, which is particularly useful for flows initiated by triggers like Chat or GraphQL API integrations._",
+          "color": "green",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "dragging": false,
+      "measured": {
+        "width": 606,
+        "height": 201
+      },
+      "position": {
+        "x": -622.132821323657,
+        "y": 347.42395626602354
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
+      "id": "sticky-qnyx8cr1s",
+      "data": {
+        "modes": {},
+        "width": 619,
+        "height": 713,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-qnyx8cr1s",
+          "text": "### **▶️ Try it out**\n\n1. **💬 Trigger via Slack Command**  \n### _This flow starts when a user sends a message in Slack using the defined command (e.g.,_ `/ask`_)._  \nThe trigger node captures the user's query and sends it into the flow.  \n### Example:\n\n### /ask What are the key points from our sales handbook?  \n\n1. **🧠 RAG Node**  \n### _Your query is processed through the RAG pipeline._\n\n### The text from Slack (`{{triggerNode_1.output.text}}`) becomes the **query**.\n\n### The system searches your connected **Vector DB (TestDB)** for relevant context documents.\n\n### The retrieved content is passed to the **LLM (GPT-4o-mini)** for a context-aware response.\n\n1. **💌 Slack Response Node**\n\n### _The generated answer is automatically posted back to the same Slack channel_  \n→ Using `{{RAGNode_555.output.modelResponse}}` as the message text.\n\n---\n\n### **▶️ Test it 👇🏻**\n\n### **Option A:** Type `/ask <your query>` directly in the configured Slack channel  \n**Option B:** Use the “Run Flow” button to simulate a manual trigger\n\n---\n\n### 🧭 \\_Once it runs, check the Slack channel to see the model’s response posted in real-time.",
+          "color": "yellow",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "dragging": false,
+      "measured": {
+        "width": 619,
+        "height": 713
+      },
+      "position": {
+        "x": -1261.1612737386226,
+        "y": -133.79881565984635
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
+      "id": "sticky-note-609",
+      "data": {
+        "modes": {},
+        "width": 636,
+        "height": 212,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-note-609",
+          "text": "### **⚡️ Flow Trigger**\n\n---\n\n### _A trigger initiates the flow. It can be a built-in tool or an integration with an external application._\n\n### Trigger Types:\n\n1. **📱App** \\- Initiate flow from an external application integration\n2. **🔌 Interface** \\- API / Webhook\n3. **💬 Widget** \\- Prebuilt UI component ( Chat, Search )\n\n---\n\n📖 Read Docs - [Flows](https://lamatic.ai/docs/flows)",
+          "color": "purple",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "dragging": false,
+      "measured": {
+        "width": 636,
+        "height": 212
+      },
+      "position": {
+        "x": -641.3127832329449,
+        "y": -132.48796796121547
       },
       "selected": false,
       "draggable": true
