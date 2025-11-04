@@ -3,16 +3,16 @@ const flowConfig = {
   "name": "Agent Reasoning - Generate",
   "nodes": [
     {
-      "id": "sticky-note-609",
+      "id": "sticky-gm21yx26f",
       "data": {
         "modes": {},
-        "width": 470,
-        "height": 160,
+        "width": 469,
+        "height": 162,
         "nodeId": "stickyNoteNode",
         "values": {
-          "id": "sticky-note-609",
-          "text": "# **⚡️ Flow Trigger**\n\n---\n\n_A trigger initiates the flow. It can be a built-in tool or an integration with an external application._\n\nTrigger Types:\n\n1. **📱App** \\- Initiate flow from an external application integration\n2. **🔌 Interface** \\- API / Webhook\n3. **💬 Widget** \\- Prebuilt UI component ( Chat, Search )\n\n---\n\n📖 Read Docs - [Flows](https://lamatic.ai/docs/flows)",
-          "color": "purple",
+          "id": "sticky-gm21yx26f",
+          "text": "# **➕ Nodes**\n\n---\n\n_Nodes are the fundamental building blocks of a flow. Each node serves a specific purpose, acting as a self-contained unit that processes input and produces output. This modular approach allows users to create complex flows by interconnecting various nodes._\n\nNode Types :\n\n1. **📱 Apps** \\- Integrate third-party applications into your flow.\n2. **🤖 AI** \\- Perform AI operations within your flow.\n3. **🛢️ Data** \\- Manipulate and transform data within your flow.\n4. **♾️ Logic** \\- Control the flow of execution in your flow.",
+          "color": "blue",
           "nodeId": "stickyNoteNode",
           "nodeName": "Sticky Note",
           "nodeType": "stickyNoteNode"
@@ -21,43 +21,14 @@ const flowConfig = {
       "type": "stickyNoteNode",
       "dragging": false,
       "measured": {
-        "width": 470,
-        "height": 160
+        "width": 469,
+        "height": 162
       },
       "position": {
-        "x": -574.2262904319621,
-        "y": -12.52704447087089
+        "x": -572.6894543200675,
+        "y": 153.35810090274606
       },
       "selected": false,
-      "draggable": true
-    },
-    {
-      "id": "sticky-qnyx8cr1s",
-      "data": {
-        "modes": {},
-        "width": 354,
-        "height": 478,
-        "nodeId": "stickyNoteNode",
-        "values": {
-          "id": "sticky-qnyx8cr1s",
-          "text": "# **▶️ Try it out**\n\n---\n\n1. Chat Widget trigger allows you to run a flow whenever a users sends a message.  \n**🎨Customize Chat Widget appearance and behaviour inside the chat widget node**\n2. 🛠️ Configure AI Node for text Generation  \n_AI Nodes allows you to generate content and reasoning with LLMs_  \n   1. **⚙️Setup Model**  \n   2. **✍🏻Configure Prompt**  \n   3. ▶️**Test AI Node**\n3. ➕ Map the output to the chat response\n4. Run flow by clicking\n\n# ▶️ **Test 👇🏻**\n\n1. Find Setup instructions to embed this widget on your website",
-          "color": "yellow",
-          "nodeId": "stickyNoteNode",
-          "nodeName": "Sticky Note",
-          "nodeType": "stickyNoteNode"
-        }
-      },
-      "type": "stickyNoteNode",
-      "dragging": false,
-      "measured": {
-        "width": 354,
-        "height": 478
-      },
-      "position": {
-        "x": -941.3354092710149,
-        "y": -12.806964036752447
-      },
-      "selected": true,
       "draggable": true
     },
     {
@@ -90,16 +61,16 @@ const flowConfig = {
       "draggable": true
     },
     {
-      "id": "sticky-gm21yx26f",
+      "id": "sticky-qnyx8cr1s",
       "data": {
         "modes": {},
-        "width": 469,
-        "height": 162,
+        "width": 354,
+        "height": 478,
         "nodeId": "stickyNoteNode",
         "values": {
-          "id": "sticky-gm21yx26f",
-          "text": "# **➕ Nodes**\n\n---\n\n_Nodes are the fundamental building blocks of a flow. Each node serves a specific purpose, acting as a self-contained unit that processes input and produces output. This modular approach allows users to create complex flows by interconnecting various nodes._\n\nNode Types :\n\n1. **📱 Apps** \\- Integrate third-party applications into your flow.\n2. **🤖 AI** \\- Perform AI operations within your flow.\n3. **🛢️ Data** \\- Manipulate and transform data within your flow.\n4. **♾️ Logic** \\- Control the flow of execution in your flow.",
-          "color": "blue",
+          "id": "sticky-qnyx8cr1s",
+          "text": "### **▶️ Try it out**\n\n---\n\n1. **🔌 Trigger via GraphQL API**  \n### This flow begins when you send a **POST** request to Lamatic’s GraphQL endpoint with a **query** and its corresponding **research** array.  \n### **Example Input:**  \n### {  \n \"query\": \"What are the key provisions of the EU AI Act?\",  \n \"research\": \\[  \n \\[  \n {  \n \"title\": \"EU AI Act Overview\",  \n \"link\": \"https://ec.europa.eu/ai-act\",  \n \"snippet\": \"The AI Act establishes harmonized rules for artificial intelligence...\",  \n \"date\": \"2024-03-10\",  \n \"position\": \"1\"  \n },  \n {  \n \"title\": \"Key Provisions of EU AI Act\",  \n \"link\": \"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206\",  \n \"snippet\": \"Defines AI system categories, compliance obligations, and prohibited practices...\",  \n \"date\": \"2024-03-15\",  \n \"position\": \"2\"  \n }  \n \\]  \n \\]  \n}\n\n---\n\n1. **🧠 Step: Generate Final Markdown**  \n   * The **AI Node (Generate Text)** takes your `query` and `research` inputs.  \n   * It produces a **well-structured, markdown-formatted article** based entirely on the provided research.  \n   * The output includes:  \n         * Clean section titles  \n         * Inline `[Title](URL)` references  \n         * Even spacing and paragraph formatting\n\n---\n\n1. **💬 Flow Response**  \n### The **GraphQL Response Node** returns:  \n### {  \n \"answer\": \"# EU AI Act Overview\\\\n\\\\n## Introduction\\\\nThe European Union AI Act...\"  \n}  \n### The `answer` field contains the **final article** ready to render directly in markdown.\n\n---\n\n1. **▶️ Test it 👇🏻**  \n### Run the flow manually with a sample payload  \n**or** use cURL / Postman to call your Lamatic endpoint:  \n### curl -X POST https://api.lamatic.ai/graphql \\\\  \n\\-H \"Content-Type: application/json\" \\\\  \n\\-d '{  \n \"query\": \"Summarize the GDPR key principles\",  \n \"research\": \\[\\[{ \"title\": \"GDPR Overview\", \"link\": \"https://gdpr.eu/\", \"snippet\": \"The GDPR is the EU’s data protection law...\", \"date\": \"2024-02-10\", \"position\": \"1\" }\\]\\]  \n}'\n\n---\n\n### 🧭 _Inspect_ `LLMNode_168.output.generatedResponse` _in your run preview to view the formatted markdown article._",
+          "color": "yellow",
           "nodeId": "stickyNoteNode",
           "nodeName": "Sticky Note",
           "nodeType": "stickyNoteNode"
@@ -108,12 +79,41 @@ const flowConfig = {
       "type": "stickyNoteNode",
       "dragging": false,
       "measured": {
-        "width": 469,
-        "height": 162
+        "width": 354,
+        "height": 478
       },
       "position": {
-        "x": -572.6894543200675,
-        "y": 153.35810090274606
+        "x": -941.3354092710149,
+        "y": -12.806964036752447
+      },
+      "selected": true,
+      "draggable": true
+    },
+    {
+      "id": "sticky-note-609",
+      "data": {
+        "modes": {},
+        "width": 470,
+        "height": 160,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-note-609",
+          "text": "# **⚡️ Flow Trigger**\n\n---\n\n_A trigger initiates the flow. It can be a built-in tool or an integration with an external application._\n\nTrigger Types:\n\n1. **📱App** \\- Initiate flow from an external application integration\n2. **🔌 Interface** \\- API / Webhook\n3. **💬 Widget** \\- Prebuilt UI component ( Chat, Search )\n\n---\n\n📖 Read Docs - [Flows](https://lamatic.ai/docs/flows)",
+          "color": "purple",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "dragging": false,
+      "measured": {
+        "width": 470,
+        "height": 160
+      },
+      "position": {
+        "x": -574.2262904319621,
+        "y": -12.52704447087089
       },
       "selected": false,
       "draggable": true
