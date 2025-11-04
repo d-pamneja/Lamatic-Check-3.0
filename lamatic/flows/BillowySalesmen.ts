@@ -3,10 +3,152 @@ const flowConfig = {
   "name": "Agentic Reasoning - Steps",
   "nodes": [
     {
+      "id": "sticky-note-609",
+      "data": {
+        "modes": {},
+        "width": 479,
+        "height": 167,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-note-609",
+          "text": "### **⚡️ Flow Trigger**\n\n---\n\n### _A trigger initiates the flow. It can be a built-in tool or an integration with an external application._\n\n### Trigger Types:\n\n1. **📱App** \\- Initiate flow from an external application integration\n2. **🔌 Interface** \\- API / Webhook\n3. **💬 Widget** \\- Prebuilt UI component ( Chat, Search )\n\n---\n\n### 📖 Read Docs - [Flows](https://lamatic.ai/docs/flows)",
+          "color": "purple",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "dragging": false,
+      "measured": {
+        "width": 479,
+        "height": 167
+      },
+      "position": {
+        "x": -580.8636972512107,
+        "y": -76.11143938411305
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
+      "id": "sticky-qnyx8cr1s",
+      "data": {
+        "modes": {},
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-qnyx8cr1s",
+          "text": "# **▶️ Try it out**\n\n---\n\n1. Chat Widget trigger allows you to run a flow whenever a users sends a message.  \n**🎨Customize Chat Widget appearance and behaviour inside the chat widget node**\n2. 🛠️ Configure AI Node for text Generation  \n_AI Nodes allows you to generate content and reasoning with LLMs_  \n   1. **⚙️Setup Model**  \n   2. **✍🏻Configure Prompt**  \n   3. ▶️**Test AI Node**\n3. ➕ Map the output to the chat response\n4. Run flow by clicking\n\n# ▶️ **Test 👇🏻**\n\n1. Find Setup instructions to embed this widget on your website",
+          "color": "yellow",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "measured": {
+        "width": 220,
+        "height": 200
+      },
+      "position": {
+        "x": -1261.9901229436189,
+        "y": -60.90517108764308
+      },
+      "draggable": true
+    },
+    {
+      "id": "sticky-kzv63mb30",
+      "data": {
+        "modes": {},
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-kzv63mb30",
+          "text": "# **💬 Flow response**\n\n---\n\n## _The final step of your flow can send output to an external system, which is particularly useful for flows initiated by triggers like Chat or GraphQL API integrations._",
+          "color": "green",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "measured": {
+        "width": 220,
+        "height": 200
+      },
+      "position": {
+        "x": -710.6880629678146,
+        "y": 370.6310610504351
+      },
+      "draggable": true
+    },
+    {
+      "id": "sticky-gm21yx26f",
+      "data": {
+        "modes": {},
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-gm21yx26f",
+          "text": "# **➕ Nodes**\n\n---\n\n_Nodes are the fundamental building blocks of a flow. Each node serves a specific purpose, acting as a self-contained unit that processes input and produces output. This modular approach allows users to create complex flows by interconnecting various nodes._\n\nNode Types :\n\n1. **📱 Apps** \\- Integrate third-party applications into your flow.\n2. **🤖 AI** \\- Perform AI operations within your flow.\n3. **🛢️ Data** \\- Manipulate and transform data within your flow.\n4. **♾️ Logic** \\- Control the flow of execution in your flow.",
+          "color": "blue",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "dragging": false,
+      "measured": {
+        "width": 220,
+        "height": 200
+      },
+      "position": {
+        "x": -592.6361650382371,
+        "y": 162.64977727873207
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
+      "id": "triggerNode_1",
+      "data": {
+        "modes": {},
+        "nodeId": "graphqlNode",
+        "schema": {
+          "sampleOutput": "string"
+        },
+        "values": {
+          "id": "triggerNode_1",
+          "headers": "",
+          "retries": "0",
+          "nodeName": "API Request",
+          "webhookUrl": "",
+          "responeType": "realtime",
+          "retry_deplay": "0",
+          "advance_schema": "{\n  \"query\": \"string\",\n  \"history\": [\n    {\n      \"role\": \"string\",\n      \"message\": \"string\"\n    }\n  ]\n}"
+        },
+        "trigger": true
+      },
+      "type": "triggerNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
       "id": "LLMNode_680",
       "data": {
         "modes": {},
         "nodeId": "LLMNode",
+        "schema": {
+          "_meta": "object",
+          "images": "array",
+          "tool_calls": "object",
+          "generatedResponse": "string"
+        },
         "values": {
           "id": "LLMNode_680",
           "tools": [],
@@ -49,37 +191,11 @@ const flowConfig = {
       "draggable": false
     },
     {
-      "id": "triggerNode_1",
-      "data": {
-        "modes": {},
-        "nodeId": "graphqlNode",
-        "values": {
-          "id": "triggerNode_1",
-          "headers": "",
-          "retries": "0",
-          "nodeName": "API Request",
-          "webhookUrl": "",
-          "responeType": "realtime",
-          "retry_deplay": "0",
-          "advance_schema": "{\n  \"query\": \"string\",\n  \"history\": [\n    {\n      \"role\": \"string\",\n      \"message\": \"string\"\n    }\n  ]\n}"
-        },
-        "trigger": true
-      },
-      "type": "triggerNode",
-      "measured": {
-        "width": 216,
-        "height": 93
-      },
-      "position": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
       "id": "responseNode_triggerNode_1",
       "data": {
         "modes": {},
         "nodeId": "graphqlResponseNode",
+        "schema": {},
         "values": {
           "id": "responseNode_triggerNode_1",
           "nodeName": "API Response",
