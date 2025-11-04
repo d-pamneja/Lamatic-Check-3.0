@@ -1,6 +1,6 @@
 const flowConfig = {
   "id": "4887fcc1-8a38-4105-b0fa-dae605a1abbf",
-  "name": "Scarce Lifeguard",
+  "name": "Slack RAG Bot",
   "nodes": [
     {
       "id": "triggerNode_1",
